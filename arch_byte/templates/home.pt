@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arch Byte</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Arch Byte</h1>
+    <p>This site is rendered dynamically using the Pyramid framework.</p>
+</body>
+</html>
