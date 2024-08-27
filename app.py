@@ -1,16 +1,10 @@
-from flask import Flask
-from flask_frozen import Freezer
+from flask import Flask, send_from_directory
 
-app = Flask(__name__)
-freezer = Freezer(app)
+app = Flask(__name__, static_folder='static')
 
 @app.route('/')
 def index():
-    return 'Hello, World!'
-
-@freezer.register_generator
-def index():
-    return '/'
+    return send_from_directory(app.static_folder, 'index.html')
 
 if __name__ == '__main__':
-    freezer.freeze()
+    app.run()
