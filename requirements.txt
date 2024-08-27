@@ -1,2 +1,2 @@
-Flask
-Flask-Frozen
+Flask==2.3.4
+Frozen-Flask==2.0.0
