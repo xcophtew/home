@@ -1,16 +1,16 @@
 from flask import Flask
-from flask_frozen import Freezer
+from frozen_flask import Frozen
 
 app = Flask(__name__)
-freezer = Freezer(app)
+frozen = Frozen(app)
 
 @app.route('/')
 def index():
     return 'Hello, World!'
 
-@freezer.register_generator
+@frozen.register_generator
 def index():
     return '/'
 
 if __name__ == '__main__':
-    freezer.run()
+    frozen.run()
