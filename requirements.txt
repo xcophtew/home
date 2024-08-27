@@ -1,2 +1,2 @@
 Flask
-Flask-Frozen==0.18.0
+Flask-Frozen
