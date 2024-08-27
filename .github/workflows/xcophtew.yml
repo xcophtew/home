@@ -1,4 +1,4 @@
-name: Deploy Python Static Site
+name: Deploy xcophtew
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   pages: write
 
 jobs:
-  build:
+  deploy:
 
     runs-on: ubuntu-latest
 
@@ -28,9 +28,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Build static site
+    - name: Build static files
       run: |
-        python app.py build
+        mkdir -p build
+        cp -r static/* build/
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
